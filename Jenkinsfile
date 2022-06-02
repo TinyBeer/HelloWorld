@@ -3,7 +3,7 @@ pipeline {
     stages {// 阶段
         stage('build') {// build stage 
             steps {
-                sh 'make'
+               sh 'echo "make"'
             }
         }
         stage('test') {// test stage
