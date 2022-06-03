@@ -9,10 +9,9 @@ pipeline {
         stage('test') {// test stage
             steps{
                 retry(3) {
-                    sh 'ping www.baidu.com'
+                    sh 'echo ping test'
                 }
                 timeout(time: 3, unit:'MINUTES'){
-                    sh './health-check'   
                     sh 'sleep 1'
                 }
             }
